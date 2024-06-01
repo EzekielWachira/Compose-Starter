@@ -1,0 +1,59 @@
+buildscript {
+    ext {
+        app_id = "dev.atick.compose"
+
+        // Version Name: X.Y.Z;
+        // X = Major Update
+        // Y = Minor Update
+        // Z = Patch / Fix
+        version_name = "1.0.0"
+        version_code = 1
+
+        // ... Project
+        agp_version = "7.4.1"
+        kotlin_version = "1.8.10"
+
+        // ... Core-android
+        core_ktx_version = "1.9.0"
+        coroutines_version = "1.6.4"
+        lifecycle_version = "2.5.1"
+        logger_version = "2.2.0"
+
+        // ... Core-UI
+        nav_version = "2.5.3"
+        fragment_version = "1.5.5"
+        activity_version = "1.6.1"
+        appcompat_version = "1.6.1"
+        compose_version = "2023.01.00"
+        compose_compiler_version = "1.4.2"
+        lottie_version = "6.0.0"
+
+        // ... Network
+        retrofit_version = "2.9.0"
+        okhttp_version = "4.10.0"
+
+        // ... Storage-Room
+        room_version = "2.5.0"
+
+        // ... Preferences-DataStore
+        preferences_version = "1.0.0"
+        serializer_version = "1.4.1"
+
+        // ... Dagger-Hilt
+        hilt_version = "2.45"
+
+        // ... SDK Config
+        min_sdk_version = 24
+        compile_sdk_version = 33
+        target_sdk_version = 33
+    }
+}
+
+plugins {
+    id("com.android.library") version "$agp_version" apply false
+    id("com.android.application") version "$agp_version" apply false
+    id("org.jetbrains.kotlin.android") version "$kotlin_version" apply false
+    id("org.jetbrains.kotlin.plugin.serialization") version "$kotlin_version" apply false
+    id("com.google.dagger.hilt.android") version "$hilt_version" apply false
+    id("androidx.navigation.safeargs") version "$nav_version" apply false
+}
